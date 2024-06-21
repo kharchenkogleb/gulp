@@ -1,0 +1,9 @@
+/node_modules
+/coverage
+/closure-library
+/spec/fixtures/dist
+/spec/fixtures/lib
+/.grunt
+/spec/bower.json
+_SpecRunner.html
+npm-debug.log
