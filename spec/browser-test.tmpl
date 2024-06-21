@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner</title>
+  <link rel="shortcut icon" type="image/png" href="<%= temp %>/jasmine_favicon.png">
+<% css.forEach(function(style){ %>
+  <link rel="stylesheet" type="text/css" href="<%= style %>">
+<% }) %>
+
+</head>
+<body>
+	<% with (scripts) { %>
+	  <% [].concat(polyfills, jasmine, boot, vendor, helpers).forEach(function(script){ %>
+	  <script src="<%= script %>"></script>
+	  <% }) %>
+	<% }; %>
+
+  <script src="spec/fixtures/dist/export-3.js"></script>
+  <script src="spec/fixtures/dist/export-4.js"></script>
+  <script src="spec/fixtures/dist/export-5.js"></script>
+  <script src="spec/fixtures/dist/export.js"></script>
+  <script src="spec/fixtures/dist/export2.js"></script>
+  <script src="spec/fixtures/dist/ns/export-child.js"></script>
+  <script src="spec/fixtures/dist/exportdefault.js"></script>
+  <script src="spec/fixtures/dist/export-parent.js"></script>
+
+  <script src="spec/fixtures/dist/import-3.js"></script>
+  <script src="spec/fixtures/dist/import-4.js"></script>
+  <script src="spec/fixtures/dist/import-5.js"></script>
+  <script src="spec/fixtures/dist/import-child.js"></script>
+  <script src="spec/fixtures/dist/import.js"></script>
+  <script src="spec/fixtures/dist/importdefault.js"></script>
+  <script src="spec/fixtures/dist/ns/export.js"></script>
+  <script src="spec/fixtures/dist/ns/import.js"></script>
+  <script src="spec/fixtures/dist/ns/import-parent.js"></script>
+  
+
+<% with (scripts) { %>
+  <% [].concat(specs, reporters).forEach(function(script){ %>
+  <script src="<%= script %>"></script>
+  <% }) %>
+<% }; %>
+</body>
+</html>
